@@ -1,0 +1,267 @@
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+     box-sizing: inherit; 
+}
+
+/* Group variables Color*/ 
+$colorItemNavbar : #3F4353;
+$greenColor      : #74D414;
+
+
+/* Group Functions Flexbox */ 
+@mixin flex {
+     display: flex;
+}
+
+@mixin flex-row-center {
+       display: flex;
+       justify-content: center;
+}
+
+@mixin flex-row-center-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@mixin flex-row-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flex-row-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-row-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+body {
+      overflow-x: hidden;
+      font-family: 'Releway';
+      max-width: 1920px;
+      min-height: 1512px;
+}
+
+/* 
+ Header -------------*/ 
+.header {
+     width: 100%;
+     height: 86px;
+     background-color: #FFFFFF;
+
+       > .container-header {
+              @include flex-row-around-center();
+              height: 100%;
+
+               .header-logo {
+                      @include flex();
+
+                        .header-cdo-logo {
+                               margin-right: 18.75px;
+                               display: block; 
+
+                               &:last-child {
+                                    margin-right: 0;
+                               }
+
+                        }
+               }
+       }
+}
+
+
+header {
+      
+        .nav-header {
+              
+                .header-list-items {
+                       margin: 0;
+                       padding: 0;
+                       @include flex();
+                       list-style-type: none;
+
+                       > .header-list-item {
+                                margin-right: 35px;
+                                font: 400 18px / 136.85% 'Raleway';
+                                text-align: left;
+
+                                 &:last-child {
+                                      margin-right: 0;
+                                 }
+
+
+                                .header-list-item-link {
+                                         text-decoration: none;
+                                         color: $colorItemNavbar;
+                                }
+
+                                .header-list-item-link___active  {
+                                    font: 400 18px / 136.85% 'Raleway';
+                                    text-decoration: none;
+                                     color: $greenColor;
+                                }
+                       }
+                }
+        }
+}
+
+
+.header {
+       
+         .header-network-social {
+                 @include flex();
+
+                  .header-network-social-link {
+                            margin: 0;
+                            margin-right: 23.75px;
+                            display: block;
+
+                            &:last-child {
+                                 margin-right: 0;
+                            }
+                  }
+         }
+}
+
+
+.header {
+       
+         .header-contact-our {
+                   @include flex();
+
+                    .header-contact-our-link {
+                          margin: 0;
+                          margin-right: 32px;
+                          font: 400 18px / 136.85% 'Raleway';
+                          text-decoration: underline;
+                          color: $colorItemNavbar;
+                    }
+
+                    .header-contact-our-tel {
+                        font: 400 18px / 136.85% 'Raleway';
+                        text-decoration: none;
+                        color: $colorItemNavbar;
+                    }
+         }
+}
+
+header {
+
+         .header-partners {
+                @include flex();
+      
+       .header-partners-image {
+                margin: 0; 
+                margin-right: 16.97px;
+       }
+
+       .header-partners-link {
+                display: block;
+                font: 400 16px / 136.85% 'Raleway';
+                text-decoration: none;
+                width: 172px;
+       }
+    }
+}
+/*----------End------------*/
+
+
+
+
+
+/* Main 
+------------------------------------------*/ 
+.container-section {
+      background-color: #E5E5E5;
+
+         .section-list-items {
+            @include flex();
+
+
+              .section-list-item {
+                     display: flex;
+                     flex-direction: column;
+                     flex-grow: 1;
+              }
+
+              .error-link {
+                    min-width: 355px;
+                    height: 150px;
+
+
+                     .error-link-blog {
+                           @include flex-row-center-center();
+                           height: 100%;
+                     }
+
+                       .error-arrow {
+                            margin: 0;
+                            margin: 0 13.5px;
+                       }
+
+                      .error-link-title { 
+                             margin: 0;
+                             display: block;
+                      }
+
+              }
+
+              .error-affichage {
+                 width: 1113px;
+                 @include flex-row-center-center();
+
+                       .error-affichage-image {
+                             z-index: 2;
+                       }
+
+                   .error-affichage-title {
+                          margin: 0;
+                          margin-top: 63.17px;
+                          font: 400 44px / 120% 'Raleway';
+                   }
+              }
+
+              .error-ellipse {
+                   width: 617px;
+                    
+                       .ellipse-rectangle {
+                               transform: translateX(-30%);
+                               width: 910px;
+                       }
+              }
+         }
+
+         .section-blog-link-bottom {
+              background: rgb(0, 0, 0);
+              width: 20%;
+              margin-right: auto;
+              margin-left: auto;
+              text-align: center;
+         }
+}
+/*---------------End----------------------*/ 
+
+
+
+
